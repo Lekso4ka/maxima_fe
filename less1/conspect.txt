@@ -1,0 +1,8 @@
+Привет!
+
+ctrl+s (cmd+s)
+
+
+docx
+xslx
+html
