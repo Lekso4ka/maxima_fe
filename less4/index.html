@@ -1,0 +1,126 @@
+<!-- 
+
+    Ctrl + / - сделать комментарий или убрать комментарий
+
+    Alt + Shift + стрелка (вниз / вверх) - продублировать строку (или выделенный кусок текста)
+    
+    Alt + стрелка (вниз / вверх) - переместить строку вниз / наверх
+
+    https://developer.mozilla.org/ru/ - документация всего!! (html/css/js)
+
+    https://htmlbook.ru/ - старый
+    https://html5book.ru/html-html5/ - новый
+
+    https://www.w3schools.com/
+
+    https://www.w3schools.com/tags/default.asp
+    https://www.w3schools.com/tags/ref_attributes.asp
+
+    https://metanit.com/web/
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строчные и блочные теги</title>
+</head>
+<body>
+    <!-- 
+        Прямоугольный объект - блочный тег (не точно)
+        Текстовое содержимое - строчный
+
+        div
+        span
+     -->
+     <!-- p>lorem100 -->
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem ipsum earum quis libero nulla explicabo illum exercitationem quidem nihil mollitia sequi magnam accusamus excepturi animi omnis, dignissimos, quos eligendi? Id ad laboriosam vitae similique placeat dolorem saepe enim voluptates ipsam. Molestias cumque perferendis sit cum nobis aliquid ut, placeat facere <img src="dog.png" alt="латинское государство" height="20"> similique ab, consequuntur atque quaerat minus fugiat autem! Eveniet laudantium assumenda voluptatum mollitia quisquam ducimus dolorum ut exercitationem aliquam beatae laboriosam aliquid, labore, eos sed rerum non cumque eius? Quasi quo dolor, placeat ab provident vel nemo? Numquam beatae ipsam enim. Beatae impedit, odio voluptatum modi blanditiis sapiente quam.</p>
+
+     <figure>
+        <img src="https://www.hasbro.com/common/productimages/ru_RU/73AD435547994A1AA71B1DE85F5BA295/9e1bef678217ba7b7a086ccc41f176f64be6e791.jpg" width="150">
+        <figcaption>Рисунок 1 Лошадь</figcaption>
+    </figure>
+     <!-- lorem10*5 -->
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quidem.
+     <mark>Aperiam&nbsp;impedit et aliquam unde illo accusamus sint dolorum ipsam!</mark>
+     Voluptatibus <code>magnam animi</code> qui quaerat aliquam cum <a href=""><div>culpa</div></a> reiciendis nostrum!
+     <div>Pariatur aspernatur minima voluptate commodi cupiditate 
+        <div>natus maiores</div>
+    quos sapiente?</div>
+     Officiis eum rem qui quod recusandae earum sunt inventore in.
+
+     <!-- 
+        Блочный тег - коробка
+
+        Строчный тег - вещь
+
+        div
+            div
+            span
+
+        span
+            span
+            div
+
+        a
+            span
+      -->
+    
+
+      <!-- 
+        br - тег без принадлежности к block или inline
+
+        Самые популярные блочные теги:
+            h1-h6 (нельзя вкладывать другие блочные теги!)
+            p (нельзя вкладывать другие блочные теги!)
+            div (универсальный)
+            header/footer/aside/nav/section/article
+
+            pre (абзац) - авторское форматирование
+
+        Самые популярные строчные теги
+            a
+            span (универсальный, нужен для визуальной стилизации части тега)
+
+            b (strong) полужирное начертание
+            i (em) курсивное начертание
+            u (ins) подчеркнутый текст
+            ? (del) перечеркнутый текст
+            
+            семантика:
+                strong - очень важный кусок текста
+                em - важный текст (обратить внимание)
+                ins - юридическая информация (подчеркнут)
+                del - устаревшая иформация
+
+
+                &nbsp; - неразбиваемый пробел
+                &trade;
+                &copy;
+
+            small - текст немного меньше
+            sup - superindex (верхний индекс)
+            sub - subindex (нижний индекс)
+            mark - hilighter (маркер)
+
+            img - Строчный!
+       -->
+       <summary>
+        <details>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, quaerat porro reprehenderit non deserunt tenetur nihil aliquam laborum facere quas quo neque? Tempora possimus minima eius amet quam cupiditate pariatur.</p>
+        </details>
+       </summary>
+       <p>
+            Цена дома: <del><i>100¥</i></del> <u><i>100£</i></u>
+       </p>
+       <pre>=)
+^_^
+dshjgfjashg      skdgkh
+12345</pre>
+       <p>
+            log<sub>a<sup>2</sup></sub>n<sup>3</sup> * 2
+       </p>
+</body>
+</html>

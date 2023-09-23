@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы обратной связи</title>
+</head>
+<body>
+    <form action="">
+        <!-- 
+            Формы обратной связи:
+                Задать вопрос на сайте
+                Мессенджер
+                Анкета
+                Опросная форма
+                Форма входа / регистрации
+                Форма заказа
+        -->
+        <div><input type="text" placeholder="Leksa" name="name"> поле ввода текста</div>
+        <div><input type="email" value="1@1.com" name="email"> поле ввода email</div>
+        <div><input type="number" max="10" min="2" value="4" step="0.01"> поле ввода числа</div>
+        <div><input type="password"> поле ввода пароля</div>
+        <div><input type="date" name="birthdate"> поле ввода даты</div>
+        <div><input type="month"> поле выбора месяца и года</div>
+        <div><input type="tel"> поле ввода телефона</div>
+        <div><input type="checkbox"> флажок выбора</div>
+        <div><input type="radio" name=""> радио кнопка</div>
+        <div><input type="color" name="" value="#ff0000"> радио кнопка</div>
+        <div><input type="range" name="" max="10" min="1" value="5"> слайдер (бегунок)</div>
+        <div>
+            <textarea name="message" cols="50" rows="5"></textarea>
+        </div>
+        <div>
+            <select name="city">
+                <option>Moscow</option>
+                <option>Kazan</option>
+                <option>Sochi</option>
+            </select>
+        </div>
+        <button type="button">Нажми сюда</button>
+        <input type="submit" value="тык">
+        <button type="reset">Очистить</button>
+        <button type="submit">Отправить</button>
+        <p>
+            Выберите животное
+            <br>
+            <input type="radio" name="pet" value="cat"> Кошка
+            <br>
+            <input type="radio"  name="pet" value="dog"> Собака
+            <br>
+            <input type="radio"  name="pet1" value="parrot"> Попугай
+        </p>
+    </form>
+</body>
+</html>
+
+
+http://127.0.0.1:5500/less4/form.html?name=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%B0&email=LexySnake%40gmail.com&birthdate=&message=&city=Moscow&pet1=parrot
