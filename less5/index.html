@@ -1,76 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Еще немного тегов</title>
 </head>
+
 <body>
-    <h2>Список занятий</h2>
-    <!-- order list (упорядоченный список / нумерованный) 
-        li - элемент списка (list)
-        css - list-style-type
-    -->
-    <ol>
-        <li>Введение</li>
-        <li>Базовая структура страницы</li>
-        <li>Работа с Figma</li>
-        <li>
-            Строчные теги
-            <ol>
-                <li>Стилистические</li>
-                <li>Семантические
-                    <ol>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                    </ol>
-                </li>
-                <li>Поля ввода</li>
-            </ol>
-        </li>
-        <li>Еще немного тегов =)</li>
-    </ol>
 
-    <h2>Список покупок</h2>
-    <!--
-        unordered list (неупорядоченный список / маркированный)
-      -->
-    <ul>
-        <li>Молоко</li>
-        <li>Хлеб</li>
-        <li>Картошка</li>
-        <li>Огурцы</li>
-        <li>Корм для кота / собаки
-            <ul>
-                <li>Сухой корм</li>
-                <li>Влажный корм</li>
-            </ul>
-        </li>
-        <li>Зубная паста</li>
-    </ul>
+    <h2>Заказать сайт</h2>
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Выберите тип сайта</td>
+                    <td>
+                        <label>
+                            <input type="radio" name="format" value="landing" checked>
+                            Одностраничный сайт
+                        </label>
+                        <br>
+                        <label>
+                            <input type="radio" name="format" value="site">
+                            Многостраничный сайт
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="inp-name">Как вас зовут</label></td>
+                    <td><input type="text" placeholder="Иванов Иван" name="name" id="inp-name"></td>
+                </tr>
+                <tr>
+                    <td>Электронный адрес</td>
+                    <td><input type="email" placeholder="name@mail.ru" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="reset">Отменить</button>
+                        <button type="submit">Заказать сайт</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
 
-    <h2>Список определений</h2>
+    <label for="inp-name">Тык</label>
+
+    <!-- nav>ul>li*3>a -->
+    <nav>
+        <ul>
+            <li><a href="pages/p1.html" target="myframe">ordered list</a></li>
+            <li><a href="pages/p2.html" target="myframe">unordered list</a></li>
+            <li><a href="pages/p3.html" target="myframe">data list</a></li>
+        </ul>
+    </nav>
 
     <!-- 
-        data list - список определений 
-        dt - data termin 
-        dd - data description (описание)
+        Фрейм - прямоугольная область, внутри которой появляется контент из другой веб-страницы 
+        Атрибуты, как и у тега image (src, width, height)
     -->
-    <dl>
-        <dt>А</dt>
-            <dd>Арбуз</dd>
-            <dd>Апельсин</dd>
-        <dt>Б</dt>
-            <dd>Банан</dd>
-        <dt>В</dt>
-            <dd>Виноград</dd>
-            <dd>Ветчина</dd>
-            <dd>Вишня</dd>
-        <dt>Г</dt>
-        <dt>Д</dt>
-            <dd>Дерево</dd>
-    </dl>
+    <iFrame src="pages/p1.html" name="myframe">Ваш браузер не поддерживает рабту с фреймами</iFrame>
+    <!-- <iFrame width="100%" src="https://wikipedia.org">Ваш браузер не поддерживает рабту с фреймами</iFrame>
+    <iFrame width="100%" src="https://google.com">Ваш браузер не поддерживает рабту с фреймами</iFrame>
+    
+    <iframe src="https://yandex.ru/map-widget/v1/?ll=37.623062%2C55.752458&mode=poi&poi%5Bpoint%5D=37.623150%2C55.752507&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D175159255687&tilt=0.87&z=18.75" width="100%" height="400" frameborder="0"></iframe>
+
+    <iframe width="100%" height="315" src="https://www.youtube.com/embed/syMnCcHEqOM?si=XoHk7clFxfDPVwsz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+
+    <!-- 
+        Теги для аудио и видео
+
+        https://www.w3schools.com/tags/tag_audio.asp
+        https://www.w3schools.com/tags/tag_video.asp
+        https://www.w3schools.com/tags/tag_track.asp
+
+     -->
+
+
+    <h2>Таблицы</h2>
+
+    <!--
+        table не относится ни к строчным, ни к блочным тегам
+        tr - table row (строка таблицы) - внутри только ячейки!!!!
+        td - table data (ячейка с данными) - внутри ячейки можно равлекаться любими тегами =)
+        th - table head (заголовочная ячейка) - текст будет полужирный и по центру
+
+        col (столбец/колонка)
+        row (строка/ряд)
+        span (пространство)
+     -->
+    <table border="1">
+        <!-- tr*3>td*4 -->
+        <tr>
+            <td rowspan="2">One</td>
+            <td>Two</td>
+            <td>Three</td>
+            <td>Fore</td>
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <!-- Увеличься в 2 раза! -->
+            <td colspan="2">Тралала ах какая я молодец =)</td>
+            <td>^_^</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, omnis!</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- 
+        thead
+        tbody - появляется сам при рендеринге страницы
+        tfoot
+     -->
+
+    <table>
+        <caption>Таблица посещения занятий</caption>
+        <thead>
+            <tr>
+                <th>ФИО</th>
+                <th>Пн</th>
+                <th>Вт</th>
+                <th>Ср</th>
+                <th>Чт</th>
+                <th>Пт</th>
+            </tr>
+        </thead>
+        <!-- tr*3>td+td*5>lorem1 -->
+        <tbody>
+            <tr>
+                <th>Иванов Иван</th>
+                <td>Lorem.</td>
+                <td>Veniam!</td>
+                <td>Quo?</td>
+                <td>Dignissimos?</td>
+                <td>Cum.</td>
+            </tr>
+            <tr>
+                <th>Федоров Федор</th>
+                <td>Lorem.</td>
+                <td>Fugit.</td>
+                <td>Officiis?</td>
+                <td>Expedita.</td>
+                <td>Voluptate!</td>
+            </tr>
+            <tr>
+
+                <th>Марьина Мария</th>
+                <td>Lorem.</td>
+                <td>Possimus.</td>
+                <td>Unde!</td>
+                <td>Numquam!</td>
+                <td>Quod.</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">
+                    <center>25-29 sep 2023</center>
+                </td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+    <!-- 
+        2023        2024
+        I II III IV I II III IV
+     -->
+
+    <!-- 
+        Использование таблиц:
+        0) Когда нужна таблица на сайте
+        1) Когда было плохо с css и надо было расставить контент по горизонтали (табличная верстка)
+        2) Почтовые сообщения! (плохо дружат с css) + устаревшие стилистические теги и атрибуты
+      -->
+
+    <!-- 
+        Alt зажат (можно натыкать мультикурсоров)
+       -->
 </body>
+
 </html>
