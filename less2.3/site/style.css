@@ -1,0 +1,25 @@
+/* * {
+
+} */
+
+body {
+    background-color: rgb(30, 36, 21);
+    color: lightgreen
+}
+h1 {
+    color: white;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    color: lightslategray;
+}
+
+/* .link {
+    ...
+}
+
+#special {
+
+} */

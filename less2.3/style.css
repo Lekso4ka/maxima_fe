@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* 
+    font - шрифт 
+    Шрифты бывают:
+    - с засечками (serif) - Times New Roman
+        исп в документах и газеты
+    - без засечек (sans-serif) - Arial / Calibri / Helvetica / Roboto
+        исп как текст в блогах / в журналах
+    
+    - моноширинный (monospace) - каждый символ одинаковой ширины (для кода)
+
+    - имитация написания от руки (cursive) - для стилистических эффектов (Segoe Script / Segoe Print)
+
+    - декоративный (fantasy) - странные декоративные эффекты (Impact)
+
+
+    ff указывает на все остальные характеристики текста
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Roboto, sans-serif;
+    font-size: 20px; /* размер шрифта */
+    background-image: linear-gradient(to right,black,rgb(10, 10, 30), rgb(68, 39, 36), rgb(124, 47, 19), black);
+    color: white;
+}
+
+h1 {
+    font-family: "Times New Roman", "Georgia", serif;
+    font-family: Kablammo, fantasy;
+    font-size: 60px;
+    text-align: center; /* left | center | right | justify */
+    text-shadow: 0px 0px 10px lightsalmon, 1px 2px 2px silver;
+    background: url("img/bg.jpg") center / cover;
+    color: black;
+}
+p {
+    font-weight: 300; /* lighter | normal | bold | bolder */
+    /* font-style: italic; /* italic | normal | oblique */
+    /* font-variant: small-caps; /* normal | small-caps*/
+    line-height: 1.5; /* высота строки - 1.2 */
+
+    /*font: font-style font-variant font-weight font-size / line-height font-family */
+    font: italic small-caps 100 30px / 2 Impact, fantasy;
+    font: 300 20px / 1.5 Roboto, sans-serif;
+    text-align: justify;
+}
+footer {
+    text-align: center;
+    text-shadow: 0px 0px 10px lightsalmon, 1px 2px 2px silver;
+}
+ul {
+    list-style-type: none;
+    text-align: right;
+    color: orangered;
+    text-transform: capitalize; /* normal | uppercase | lowercase | capitalize */
+}
+
+a {
+    color: inherit; /* такой же цвет как у родительского тега */
+    text-decoration: none; /* none | underline | line-through | overline*/
+}
+
+main {
+    /* width: 60%; */
+    /* background-color: #222; */
+}
+.card {
+    background-color: silver;
+    /* border - граница */
+    border-width: 10px;
+    border-color: orangered;
+    border-style: solid; /* solid | dotted | dashed | double */
+    /* top left right bottom */
+    border-top-width: 20px;
+    border-top-color: navy;
+    border-left-style: double;
+    border: 1px solid;
+    border-bottom: dashed navy;
+
+    width: 300px;
+    /* width: 50%; */
+    /* height: 100px; */
+    overflow: auto; /* visible | hidden | scroll | auto */
+    padding: 30px 50px;
+    
+    margin: 10px 0 30px;
+    margin: 20px auto; /* auto - только по горизонтали для строго блочных тегов!!! */
+    /*
+        10px - top right bottom left
+        padding: 10px (t) 100px (r) 20px (b) 0 (l);
+        padding: 10px (y - t&b) 20px (x - l&r);
+        padding: 100px (t) 30px (x - l&r) 50px (b);
+    */
+    box-sizing: border-box; 
+    /* как влияет размер w и h с учетом границ и отсупов
+        content-box - width и height не включают в себя паддиги и границы (только размер контента) 
+        border-box - width и height включают в себя паддиги и границы
+    */
+}
+
+
+/*
+    По умолчанию в браузере есть заданные марджины для тегов: 
+        - body
+        - h1-h6
+        - p (blockquote / pre)
+        - ul/ol
+
+
+*/
