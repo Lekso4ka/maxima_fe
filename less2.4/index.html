@@ -1,0 +1,68 @@
+<!-- 
+
+    https://www.w3schools.com/howto/default.asp - интересные варианты сделать динамические элементы на сайте
+
+    иконки как шрифт
+    https://fontawesome.com/
+    https://icons.getbootstrap.com/
+    https://lineicons.com/icons/
+
+
+    https://cdnjs.com/ - коллекционируют в себе файлы с разных открытых источников (библиотек)
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- .daddy>.child.child$*3 -->
+    <!-- nav>ul.menu>li*4{link $} -->
+    <nav>
+        <ul class="menu">
+            <li>link 1</li>
+            <li>link 2</li>
+            <li>link 3
+                <!-- ul.submenu>li*5{sublink $} -->
+                <ul class="submenu">
+                    <li>sublink 1</li>
+                    <li>sublink 2</li>
+                    <li>sublink 3</li>
+                    <li>sublink 4</li>
+                    <li>sublink 5</li>
+                </ul>
+            </li>
+            <li>link 4</li>
+        </ul>
+    </nav>
+    <div class="daddy">
+        <div class="child child1">1</div>
+        <div class="child child2">2</div>
+        <div class="child child3">3</div>
+    </div>
+    <div class="modal-container">
+        <div class="modal">
+            <div class="close">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <h2>Авторизация</h2>
+            <form action="">
+                <div class="form-row">
+                    <label for="login">Ваш логин</label>
+                    <input type="text" id="login" name="login" value="123">
+                </div>
+                <div class="form-row">
+                    <label for="pwd">Ваш пароль</label>
+                    <input type="password" id="pwd" name="password">
+                </div>
+                <button class="btn" type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

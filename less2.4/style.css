@@ -1,0 +1,187 @@
+.child {
+    border: 3px solid #222;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    font: 30px / 200px sans-serif;
+    text-align: center;
+}
+.child:hover {
+    background: yellow;
+}
+.child1 {
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    top: 20px;
+    left: 50px;
+    z-index: 2;
+}
+.child2 {
+    background-color: lime;
+    position: relative;
+    right: -100px;
+    top: 30px;
+    /* position: sticky; */
+    top: 0; /* Приклеивание к краю экрана, когда родительский тег прокручивается */
+    z-index: 1;
+}
+.child3 {
+    background-color: blue;
+    color: #fff;
+    position: fixed;
+    top: calc(50% - 103px);
+    /* left: calc(50% - 103px); */
+    left: 40px;
+    z-index: 0;
+}
+.daddy {
+    width: 700px;
+    height: 700px;
+    background-color: rgba(192, 192, 192, 0.4);
+    position: relative;
+}
+
+/*
+    position
+        static - статичное расположение (каждый элемент отображается на странице в том порядке, в котором находится в html-коде)
+
+        relative - относительное позиционирование (может быть передвинут относительно своего текущего местоположения)
+
+        absolute - абсолютное позиционирование (расположение элемента относительно границ ближайшего родителя, у которого position !== static)
+        Такой тег больше не находится в контенте родительского тега
+
+        fixed - фиксированное позиционирование относительно границ экрана (viewport)
+
+        sticky - приклеевает элемент к границе родительского тега, когда он сдвигается
+
+    left - px / % (процент от размера родительского элемента)
+    right
+    top 
+    bottom
+*/
+
+.modal-container {
+    display: none;
+    position: fixed;
+    background-color: #222222e1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(2px) grayscale(70%); /* glassmorphism */
+}
+.modal {
+    padding: 50px;
+    background-color: white;
+    width: 30%;
+    border-radius: 20px;
+    position: absolute;
+    top: 30%;
+    left: calc(25% + 50px);
+    font-family: sans-serif;
+}
+.modal>.close {
+    background-color: cyan;
+    font-size: 30px;
+    line-height: 20px;
+    width: max-content;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 silver;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #222;
+    color: #fff;
+}
+.modal h2 {
+    margin: 0;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+.modal .form-row label {
+    display: block;
+    margin-bottom: 4px;
+    color: gray;
+    /* font-size: 12px; */
+}
+.modal .form-row input {
+    border: 1px solid silver;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 6px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn {
+    height: 36px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: navy;
+    color: #fff;
+    padding: 6px 10px;
+}
+.modal .btn {
+    width: 100%;
+}
+
+.close, .btn {
+    cursor: pointer;
+}
+
+.modal-container.active {
+    display: block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+nav {
+    position: sticky;
+    z-index: 2000;
+    top: 0;
+}
+.menu li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+
+.submenu {
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    left: 0;
+    top: 40px;
+    display: none;
+}
+.submenu>li {
+    border: none;
+    width: max-content;
+}
+li:hover {
+    color: navy;
+}
+
+li:hover>.submenu {
+    display: block;
+}
