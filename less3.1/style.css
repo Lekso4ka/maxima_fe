@@ -1,0 +1,72 @@
+/*
+    px
+    800x600
+    1920x1080
+
+    100px??
+
+    % - процент от размера родительского элемента
+
+    // Для текста???
+    em - процент от размера шрифта родительского элемента
+    
+    при открытии сайта размером шрифта по умолчанию является 1 rem (при инициализации сайта)
+    rem 
+    
+    h1 - 2em
+    h2 - 1.5em
+    h3 - 1em
+
+    v - viewport
+    vh - viewport height
+    vw - viewport width
+*/
+
+html {
+    font-size: 10px;
+}
+
+body {
+    margin: 0;
+    font: 2rem sans-serif;
+}
+h2, p {
+    margin: 0;
+}
+.container {
+    background-color: bisque;
+    font-size: 0;
+    width: 100rem;
+    padding: 5rem;
+    margin: auto;
+    min-height: 100vh;
+}
+.container__item {
+    font-size: 2rem;
+    width: calc((100% - 4rem) / 3);
+    padding: 2rem;
+    border: 1px solid;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    min-height: 20rem; /*не менее чем 200px*/
+    max-height: 50rem; /* не более 500px */
+    height: 300px;
+    vertical-align: top;
+    background-color: burlywood;
+    overflow: auto;
+}
+.container__item h2 {
+    font-size: 1.5em;
+}
+.container__item small {
+    color: peru;
+    font-size: .7em;
+}
+.container__item_mb-0 {
+    margin-bottom: 0;
+}
+.container__item_mr-0 {
+    margin-right: 0;
+}
