@@ -70,3 +70,69 @@ h2, p {
 .container__item_mr-0 {
     margin-right: 0;
 }
+
+table {
+    font-size: 2rem;
+    border: 1px solid;
+    margin-bottom: 50px;
+    border-collapse: collapse; /* separate | collapse */
+    width: 100%;
+}
+/* tbody tr {
+    background-color: burlywood;
+} */
+tbody tr:hover {
+    background-color: burlywood;
+}
+th, td {
+    border: 1px solid;
+    padding: 1rem;
+    vertical-align: top;
+}
+/* 
+td {
+    max-width: 100px;
+    min-width: 100px;
+    width: 100px;
+} */
+.cell1 {
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+}
+.cell2 {
+    vertical-align: middle;
+}
+.cell5 {
+    max-width: 300px;
+    /* max-height: calc(3rem * 1.2); */
+    min-height: calc(3rem * 1.2);
+    
+}
+.cell5>div {
+    max-height: calc(6rem * 1.2);
+    overflow: auto;
+}
+
+.cell4 {
+    max-width: 50px;
+    text-overflow: clip;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.text {
+    font-size: 2rem;
+    background-color: burlywood;
+    margin-bottom: 50px;
+    width: max-content;
+    position: absolute;
+    right: 0;
+    left: 0;
+    padding: 0 2rem;
+}
+.text__item {
+    margin-bottom: 1rem;
+    background-color: aliceblue;
+    display: block;
+    /* width: max-content; */
+}
