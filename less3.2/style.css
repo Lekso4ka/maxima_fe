@@ -123,3 +123,68 @@ h3, p {
     font-size: 1.2rem;
     vertical-align: middle;
 }
+
+/*
+    handheld, tv, desktop, braile, print, screen
+*/
+@media print {
+    .map {
+        background-color: transparent;
+        padding: 50px;
+    }
+    .map__text_big,
+    .map__text_small {
+        color: #000;
+    }
+    .fa-location-dot,
+    .map__link_dotted,
+    .map__text_right {
+        display: none;
+    }
+    .map__block {
+        display: block;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .map {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .map__block_left {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .map {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .map__block {
+        display: block;
+        width: auto;
+    }
+    .map__block_left {
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .map__text {
+        display: inline-block;
+        width: calc(50% - 20px);
+        vertical-align: top;
+    }
+    .map__text_left {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+    .map__text_right>.map__text {
+        width: auto;
+    }
+    .map__soc {
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+}
