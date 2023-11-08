@@ -1,0 +1,111 @@
+/*
+    Псевдо - не существует
+
+    Псевдоэлемент
+    Псевдокласс
+
+*/
+
+a:hover {
+    text-decoration: overline;
+}
+
+/*
+    ::before (перед)
+    ::after (после)
+
+    У каждго псевдоэлемента должно быть свойство content!!! Без него, псевдоэлемент никогда не сработает
+*/
+html {
+    font-size: 30px;
+}
+body {
+    font-family: sans-serif;
+}
+p::before {
+    color: red;
+    content: "Абзац: ";
+}
+p::after {
+    content: "\2605";
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1;
+}
+li::before {
+    content: "\27A9";
+    position: absolute;
+    color: blueviolet;
+    left: 10px;
+    /* top: calc(50% - (1.5rem * 1.2) / 2); */
+    /* line-height: calc(3rem * 1.2); */
+    line-height: 3rem;
+}
+/* h2::after {
+    content: url(../less2.2/img/bg.jpg);
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+} */
+
+p::after {
+    content: "";
+    display: inline-block;
+    height: 30px;
+    width: 60px;
+    /* background-color: violet; */
+    background-image: url(../less2.2/img/tiger.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h2 {
+    /* border-bottom: 5px solid; */
+    /* width: max-content;
+    margin: auto; */
+    text-align: center;
+    position: relative;
+    text-shadow: 0 0 10px blueviolet;
+}
+h2>.separator {
+    width: 1rem;
+    height: 5px;
+    background-color: brown;
+    margin: auto;
+    display: block;
+    margin-top: 1rem;
+}
+h2::after {
+    content: "";
+    width: 1rem;
+    height: 5px;
+    background-color: brown;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+}
+h2::before {
+    content: attr(title);
+    font-size: 1.1em;
+    position: absolute;
+    top: -.1em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: -1;
+    color: transparent;
+    text-shadow: 0 0 7px lightskyblue;
+}
+
+/* to be continue... */
