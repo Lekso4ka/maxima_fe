@@ -3,12 +3,17 @@
 
     Псевдоэлемент
     Псевдокласс
+        :active
+        :focus
+        :link / :visited
+        :hover
+        :checked
+
+
 
 */
 
-a:hover {
-    text-decoration: overline;
-}
+
 
 /*
     ::before (перед)
@@ -109,3 +114,169 @@ h2::before {
 }
 
 /* to be continue... */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    /* text-decoration: overline; */
+    background-color: #222;
+    color: #fff;
+}
+
+a:active::after {
+    content: "\276e";
+    color: aquamarine;
+}
+a:link { /* не посещенная ссылка */
+    /* color: yellow; */
+}
+a:visited { /* посещенная ссылка */
+    /* color: orange; */
+}
+
+button {
+    background-color: blueviolet;
+    font-size: 1rem;
+    height: 2rem;
+    box-sizing: border-box;
+    font-family: inherit;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+button:hover {
+    color: aliceblue;
+    cursor: pointer;
+}
+button:active {
+    box-shadow: 0 0 10px 1px blue;
+}
+
+input {
+    height: 2rem;
+    box-sizing: border-box;
+    vertical-align: top;
+    border: 1px solid blueviolet;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 8px 12px;
+    outline: none;
+}
+
+input:focus {
+    /* color: blue; */
+    /* border-color: blue;  */
+    /* outline: 4px dotted silver; */
+    box-shadow: 0 0 5px 0 #0004;
+}
+
+p:first-line {
+    color: green;
+}
+
+h2::first-letter {
+    /* font-size: 1.5em; */
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px violet;
+}
+
+/*
+    !!!!! CSS считает с 1 (единицы!!!!!)
+    :first-child - первый дочерний тег
+    :last-child - последний тег
+    :nth-child(2) - n-й тег (2-й тег)
+    :nth-last-child(3) - n-й тег с конца (3-й тег с конца)
+
+    :first-of-type
+    :last-of-type
+    :nth-of-type()
+    :nth-last-of-type()
+
+*/
+
+section:nth-child(2) {
+    background-color: silver;
+}
+
+li:first-child {
+    color: grey;
+}
+
+li:nth-child(3n) {
+    background-color: cornflowerblue;
+}
+li:nth-child(3n - 1) {
+    background-color: lightcyan;
+}
+li:nth-child(3n - 2) {
+    color: cornflowerblue;
+}
+
+
+section:nth-of-type(2) {
+    filter: blur(2px); 
+}
+
+nav {
+    font-size: 0;
+}
+nav a {
+    display: inline-block;
+    font-size: 1rem;
+    background-color: bisque;
+    margin-right: 20px;
+    width: calc(20% - (80px / 5));
+    text-align: center;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+nav a:last-child {
+    margin: 0;
+}
+
+input[type="checkbox"] {
+    display: none;
+    /* visibility: hidden; */
+}
+input[type="checkbox"] + label {
+    padding-left: 1.4rem;
+    line-height: 1;
+    position: relative;
+    cursor: pointer;
+}
+input[type="checkbox"] + label::before {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid blueviolet;
+    position: absolute;
+    box-sizing: border-box;
+    top: .1rem;
+    border-radius: 8px;
+}
+
+input[type="checkbox"] + label::after {
+    content: "";
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    box-sizing: border-box;
+    top: .1rem;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../less2.2/img/tiger.png);
+    visibility: hidden;
+} 
+
+input[type="checkbox"]:checked + label::after {
+    visibility: visible;
+}
+
+
