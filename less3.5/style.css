@@ -1,0 +1,187 @@
+body {
+    background-image: radial-gradient(circle, rgb(74, 81, 88),navy, rgb(7, 7, 30) 80%);
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    width: 700px;
+    margin: auto;
+    align-content: center;
+    background-color: #0002;
+}
+.card {
+    background-color: #fff8;
+    width: 320px;
+    padding: 24px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px 0 #0004;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.card_grid {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+}
+.card__pic {
+    background-image: linear-gradient(to right, #fff1, silver);
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__pic::before {
+    content: "";
+    /* background-color: red; */
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+.card__text {
+    margin: 0;
+    background-image: linear-gradient(to right, #fff1, silver);
+    min-height: 20px;
+    border-radius: 4px;
+}
+.card__text_2 {
+    grid-column-end: span 2;
+}
+
+/*
+    2d
+    3d
+
+    1) translate(x, y) - сдвиг на n-е кол-во пикселей
+    2) rotate(90deg) - поворот deg - градус!
+    3) scale(1, 1) - масштабирование
+    4) skew(0deg, 0deg) - искажение
+
+
+    https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix
+    https://d3js.org/
+*/
+
+
+.card_special {
+    background-color: rgba(255, 20, 145, 0.384);
+    /* transform: translate(30px, 0); */
+    /* transform: translate(100%, 0); */
+    position: relative;
+    /* left: 100%; */
+    /* transform: rotate(30deg) translate(0%, 0); */
+    /* transform: scale(-1, 1); */
+    /* transform: skew(6deg, 0deg); */
+
+    transform-origin: 0% 50%;
+    transform-origin: left top;
+    transform-origin: 54px 54px;
+    /* transform: rotate(10deg); */
+    /*
+    
+        transition - изменение стилей (почти всех) при тех или иных обстоятельствах
+        При наведении мышки увеличивается элемент и изменяется цвет или тень или все css-правила
+
+        transition-duration - время анимации (s, ms)
+        transition-delay - задержка анимаци
+        transition-property - какие css-правила будут изменяться со временем (не работает для display, position, top, left, right, bottom)
+        transition-timing-function - временная функция (ровност анимации)
+    */
+    transition-duration: 1000ms;
+    transition-delay: .1s;
+    /* transition: transform 2s 1s; */
+    /* transition-property: transform, box-shadow; */
+
+    /* 
+        https://cubic-bezier.com/#.17,.67,.83,.67
+    */
+    transition: transform 5000ms cubic-bezier(.07,1,0,-0.38);
+    transition-timing-function: cubic-bezier(.74,.92,.98,.33);
+}
+.card_special::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    /* background-color: #000; */
+    border-radius: 50%;
+    /* top: 54px;
+    left: 54px; */
+    top: 50px;
+    left: 50px;
+}
+
+.card_special:hover {
+    /* transform: scale(1.1, 1.1); */
+    /* background-color: #fff; */
+    box-shadow: 0 0 5px 0 #0008, 0 0 15px 0 #0008, 0 0 30px 1px #0004;
+    /* opacity: 0; */
+    /* height: 360px; */
+    /* display: none; */
+    /* left: 30px; */
+    transform: translate(50%, 0);
+}
+
+
+.card:nth-child(2) {
+    background-color: rgba(127, 255, 212, 0.285);
+    /*
+        animation-name
+        animation-duration
+        animation-timing-function
+        animation-delay
+        animation-iteration-count - сколько раз повторяется анимация
+    */
+    transform-origin: 54px 54px;
+    /* animation: card-rotation 3s linear 2; */
+}
+
+/* @keyframes card-rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
+
+@keyframes card-rotation {
+    50% {
+        transform: translate(50%, 0);
+    }
+    100% {
+        transform: translate(0, 0) rotate(360deg);
+    }
+}
+
+.card:nth-child(2) .card__pic {
+    transform-origin: 0 center;
+    animation: anime 5s linear infinite;
+}
+
+/* https://github.com/queen-leksa/clock-dev3.3-1sem2022 */
+
+
+@keyframes anime {
+    0% {
+        transform: scale(1, 1) rotateY(0deg);
+        background-image: linear-gradient(to right, #fff1, silver);
+    }
+    50% {
+        transform: scale(1.2, 1.2) rotateY(180deg);
+        background-color: #fff1;
+    }
+    100% {
+        transform: scale(1, 1) rotateY(360deg);
+        background-image: linear-gradient(to right, #fff1, silver);
+    }
+}
