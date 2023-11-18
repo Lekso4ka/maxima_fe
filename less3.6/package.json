@@ -1,0 +1,17 @@
+{
+  "name": "lesson-16",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/inter": "^5.0.15",
+    "@fontsource/nunito": "^5.0.15",
+    "bootstrap-icons": "^1.11.1"
+  }
+}

@@ -1,0 +1,81 @@
+1. Node.js
+
+20.9.0
+
+0.0.0
+
+0.3.0 - разработчики сделали программу, но не считают ее готовой к выпуску
+
+1 число - мажорная версия (сильные изменения внутри программы, которые надо отслеживать для ее корректной работы)
+2 число - минорная версия (дополнения, которые добавляют функционал в программу)
+
+10.1.2
+10.2.0 - добавлена возможность менять тему сайта (светлая/темная)
+
+3 число - патч (10.2.6)
+
+feature
+bugfix
+
+
+20.9.0 - LTS (самая стабильная версия, которой пользуются)
+21.2.0 - Current - последняя обновочка
+
+Проверить что node.js установлен и работает
+
+node -v
+node --version
+
+
+font-awesome
+bootsrap
+sass
+pug
+react
+
+________ node.js => суп в виде веб-сайта (pwa)
+
+PWA - progressive web app (сохранить сайт на телефон как приложение) - важную роль играет мобильная адаптация!!!
+
+
+npm - node package manager 
+npm -v
+
+Логика работы команд терминала: кто что-делает над-чем-делает
+node - v
+
+--version (-v)
+--global (-g)
+-f
+-m
+Флаги (доп опции / доп подсказки)
+
+npm install package
+npm i package
+
+
+Когда происходит установка пакетов, появляется папка node_modules
+
+https://www.npmjs.com/package/@fontsource/nunito - подключать шрифт nunito (не все шрифты есть)
+
+
+node_modules - загружаем на github ТОЛЬКО когда у нас используются только библиотеки со стилями/картинками и шрифтами!!!!!
+В остальных случаях (в дальнейшем - всегда) мы удаляем папку node_moduls для загрузки на гит
+
+nvm
+node version manager
+
+https://github.com/nvm-sh/nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+
+
+https://www.freecodecamp.org/news/nvm-for-windows-how-to-download-and-install-node-version-manager-in-windows-10/
+https://github.com/coreybutler/nvm-windows#installation--upgrades
+
+nvm list - что можно использовать
+nvm install 14 - установит последнюю стабильную версию node.js 14
+nvm use 14 - использовать node 14
+
+
+npm init -y (чтоб не мучиться)
+npm init (придется помучитьтся)
