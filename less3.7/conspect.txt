@@ -1,0 +1,26 @@
+Препроцессоры html:
+    pug
+        https://www.npmjs.com/package/pug-cli
+        npm install pug-cli -g
+        Преобразование
+        pug index.pug   
+    ejs
+    moustache
+
+Препроцессоры css:
+    less .less
+
+    https://sass-lang.com/
+    https://sass-scss.ru/guide/
+    npm i sass -g
+        sass .sass
+        scss .scss
+
+        sass --watch input.scss output.css
+
+    stylus .styl
+
+
+Ctrl + C - остановить препроцессор (вернуть терминал)
+
+
