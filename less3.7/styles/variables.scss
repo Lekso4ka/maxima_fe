@@ -1,0 +1,12 @@
+$main-color: #F22E5C;
+$secondary-color: #2EF2C4;
+$bg-color: #222;
+$text-color: #dedede;
+$size: 10px;
+
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

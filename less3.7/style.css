@@ -1,12 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+.calendar > *, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #222;
+  font-family: "Bungee Spice", Impact, fantasy;
+}
+
 .calendar {
-  height: 100vh;
+  height: calc(100vh - 100px);
   padding: 50px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 10px;
+  grid-template-rows: 50px;
+  gap: 20px;
+  background-color: #222;
+  color: #dedede;
+  max-width: 1000px;
+  flex: 1;
+}
+.calendar:hover .day {
+  border-color: #F22E5C;
+}
+.calendar > * {
+  padding: 10px;
+  border-radius: 10px;
+}
+.calendar .week-day {
+  background-color: #F22E5C;
+  font-size: 20px;
+}
+.calendar .day {
+  border: 1px solid #2EF2C4;
+  font-size: 30px;
 }
 
-.week-day {
-  background: silver;
-  color: white;
-}/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
