@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <!-- Если код никак не связан с html -->
+    <script>
+        // document.body.style.background = "red";
+        /*
+        fsvg
+        sgsg
+        sdgdg
+        adgadg
+        */
+    </script>
+</head>
+<body>
+    <h1>JavaScript</h1>
+    
+    <!-- Если надо что-то сделать с HTML -->
+    <script>
+        document.body.style.background = "bisque";
+
+        /*
+            Типы данных - то как JS воспринимает информацию
+            Оператор - действие, которое позволяет выполнить что-то над операндом
+            Переменная (переенная / постоянная - константа) - слово, записанное латинскими буквами, внутри которого можно сохранять значение
+
+            age = 11
+            age = 12
+            age = 13
+
+            myAge
+            mySisAge
+
+            const prof = "Программист"
+
+        */
+
+        // Создали переменную под имя, но еще пока не знаем, какое имя там будет
+        // var - variable
+
+        /*
+            Ошибки
+            "n" has already bee declared - переменная уже есть! Зачем ее объявлять снова???
+
+            "n" is no defined - ТАКОЙ ПЕРЕМЕННОЙ НЕТ! Я не знаю кто ты - надо проверить правильно ли вы написали БУКВЫ!
+
+        */
+        let name;
+        const PROF = "FrontEnd-developer";
+        name = "Игорь";
+        name = "Leksa";
+
+        let x = 2;
+
+        const BUS_LENGTH = 20;
+        const DLINA_MARSHRUTA_AFTOBUSA = 24;
+
+        /*
+            Типы данных:
+                number (число)
+                    1
+                    -1
+                    1.1
+                    Infinity
+                    -Infinity
+                операторы
+                    бинарные
+                        +
+                        -
+                        / (деление)
+                        * (умножение)
+                        % (остаток от деления)
+                        ** 
+                    унарные
+                        +
+                        -
+                string (строка)
+                    в строке все значения написаны в кавычках
+                    строка - любая последовательность символов
+
+                    "2"
+                    'abc'
+                    `tratata` - это тоже строка (ё-кавычки / кайфовые кавычки)
+                    '' - пустая строка
+                    ' ' - не пустая строка
+
+                    + - оператор конкатенации (склеивание строк)
+        */
+
+        name = "Ruslan Renatovich";
+        // name = prompt("Кто это был?")
+        let word = "Холодильник";
+        word = 'авто';
+        let verb = "утопил";
+        // verb = prompt("Что он/она сделал");
+        // word = prompt("Укажите предмет ж.р.");
+
+
+        let result = name + " " + verb + " любимую " + word;
+
+        // Интерполяция - шаблонная строка - внедрение переменной внутрь текста
+
+        result = `${name} ${verb} любимую ${word}`
+
+        result = `${name} \ ${5+34} лет`
+
+        result = "Д'артаньян"
+        result = 'ООО "Ромашка"'
+        result = "\\ООО\u2014 \u2013\"Ромашка\"\\ \n★"
+
+
+        let n = 1 / 3;
+        
+        // console.log(n + 3);
+        
+        // n = n.toFixed(1);
+        // n = n * 1 + 3;
+        
+        // console.log(result);
+
+        /*
+            Math
+                .round(x) - округлить 
+                .floor(x) - округлить вниз
+                .ceil(x) - округлить вверх 
+                .abs(x) -  число по модулю  
+                .random() - случайное число в диапазоне от 0 до 1
+                    0 ≤ x < 1
+                    0 < x < 1    
+                    x * 10
+                    0 < x * 10 < 10
+
+        */
+
+        n = Math.round(3.49)
+        n = Math.floor(1.9)
+        n = Math.ceil(1.0000000000)
+
+        n = 2 ** 10 // степень Math.pow(2,10)
+        n = 8 ** (1/3) // корень из трех
+
+        n = Math.max(2, 5 , 93, 14, 87, 11);
+        n = Math.min(93, 14, 87, 11);
+
+        n = Math.random() * 10;
+        // console.log(n);
+        n1 = Math.round(n)  // 0≤n≤10
+        n2 = Math.floor(n)  // 0≤n<10
+        n3 = Math.ceil(n)   // 0<n≤10
+        // console.log(n1, n2, n3);
+
+
+        const RED = Math.floor(Math.random() * 256);
+        const GREEN = Math.floor(Math.random() * 256);
+        const BLUE = Math.floor(Math.random() * 256);
+
+        let color = `rgb(${RED},${GREEN},${BLUE})`;
+        console.log(color)
+
+        document.body.style.background = color;
+
+
+
+        /*
+            ДЗ: Изменить код цвета так, чтобы он дополнитеьно выводил процент прозрачности (rgb => rgba);
+        
+        */
+
+    </script>
+</body>
+</html>
