@@ -139,18 +139,114 @@ let n = Number("0");
 console.log("n", n)
 
 
-
-
-
-
-
-
-
-
-
-
 /*
     Преобразовать многозначное число с пробелами
     Посчитать сколько цифр в числе
+    
+    https://i.stack.imgur.com/T9M2J.png
 */
 
+
+/*
+
+        5 <= x < 7 (удов)
+        x < 5 (неуд)
+        7 <= x <= 8 (7 <= x < 9) (хор)
+        x >= 9 (отл)
+*/
+
+let x = Math.round(Math.random() * 10);
+console.log(x);
+// console.log(5 <= x);
+// console.log(x < 7);
+// console.log( 5 <= x < 7); // Не правильно!!!
+console.log( (5 <= x && x < 7) || (x >= 7 && x <= 8), "Среднее значение"); // Не правильно!!!
+console.log( x < 5 || x > 8, "Граничащие значения"); // Не правильно!!!
+
+
+/*
+    Если (истина) => результат
+*/
+let str = "ololo"
+if (x === 8) {
+    str = `${x} - символ бесконечности"`
+    console.log(str);
+} else {
+    str = `${x} не является символом как 8`
+    console.log(str);
+}
+
+if (x >= 5 && x < 8 ) {
+    console.log(`${x} - средний балл`);
+} else {
+    console.log(`${x} - крайний балл`);
+}
+
+if (x >= 5 && x < 7 ) {
+    console.log(`${x} - удовлетворительно`);
+} else if (x >= 7 && x < 9) {
+    console.log(`${x} - хорошо`);
+} else if (x >= 9) {
+    console.log(`${x} - отлично!!!`);
+} else {
+    console.log(`${x} - не очень хорошо...`);
+}
+
+
+console.log("Go next");
+
+// x = prompt("Дай число!");
+if (x >= 9) {
+    console.log(`${x} - отлично!!!`);
+} else if (x >= 7) {
+    console.log(`${x} - хорошо`);
+} else if (x >= 5) {
+    console.log(`${x} - удовлетворительно`);
+} else if (x >= 0) {
+    console.log(`${x} - не очень хорошо...`);
+} else {
+    console.log(typeof x); 
+    console.log("Сам такой!")
+}
+
+str = "Apple";
+console.log(str.length) // длина строки
+console.log(str.toLowerCase()) // длина строки
+console.log(str.toUpperCase()) // длина строки
+
+str = "";
+n = Math.floor(Math.random() * 90000 + 10000)
+let end = n % 1000;
+console.log(n.toString().length);
+if (end === 0) {
+    str = n / 1000 + " 000"
+} else if (end !== 0) {
+    console.log(n / 1000);
+    let ln = (end + "").length;
+    if (ln === 1) {
+        str = " 00" + end
+    } else if (ln === 2) {
+        str = " 0" + end
+    } else {
+        str = " " + end;
+    }
+    str = Math.floor(n / 1000) + str;
+}
+console.log(str);
+
+
+/*
+    Дано случайное число в диапазоне от 0 до 10000
+
+    есть существительное "ворона"
+    есть глагол (не обязательно) "сидела"
+    есть фраза
+
+    "На ветке сидели 50 ворон"
+    "На ветке сидела 21 ворона"
+    "На ветке сидели 1143 вороны"
+
+
+    Посчитать от 0 до 30 - станет понятно при каких условиях какие окончания!
+
+*/
