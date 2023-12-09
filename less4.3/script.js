@@ -89,11 +89,84 @@ console.log(`${START} свечек хватит на ${age} лет`);
 let charIndex = 0;
 while(charIndex < word.length) {
     let char = word[charIndex];
-    console.log(char);
+    // console.log(char);
     charIndex++;
 }
 console.log("index", charIndex);
 console.log("------------")
 while(charIndex--) {
-    console.log(word[charIndex]);
+    // console.log(word[charIndex]);
 }
+
+
+n = 10;
+
+while (n > 0) {
+    // console.log(n);
+    n--;
+}
+console.log("------------")
+
+/*
+    for (v1; v2; v3) {}
+    v1 - выражение, которое выполнится один раз перед началом цикла (перед проверкой условия)
+    v2 - условие (true / false)
+    v3 - выражение, которе выполняется после блока с кодом каждой итерации цикла
+*/
+let n2 = "Variable"
+for (let n2 = 10; n2 > 0; n2--) {
+    // n2 - локальная переменная внутри цикла!
+    // console.log(n2);
+}
+
+console.log(n2);
+
+
+/*
+    Определить, является ли слово палиндромом
+    Довод
+*/
+
+word = "Двор";
+let reWord = "";
+
+for (let i = 0; i < word.length; i++) {
+    // console.log(word[i]);
+}
+
+for (let i = word.length - 1; i >= 0; i--) {
+    reWord += word[i];
+    // console.log(word[i], reWord);
+}
+
+let str = "";
+if (word.toLowerCase() !== reWord.toLowerCase()) {
+    str = "не "
+}
+
+console.log(`Слово ${word} ${str}является палиндромом`);
+
+
+let num = 7;
+
+let result = ""
+// if (num === 6) {
+//     result = "Число равно 5";
+// } else {
+//     result = "Число не равно 5";
+// }
+num === 5 
+    ? result = "Число равно 5" 
+    : result = "Число не равно 5";
+
+
+num === 5 
+    ? result = "Число равно 5" 
+    : num === 3 
+        ? result = "Число равно 3" 
+        : result = "Число не равно ни 5, ни 3";
+
+result = num === 5 ? "Число равно 5" : "Число не равно 5";
+
+console.log(result);
+console.log(num === 5 ? "Число равно 5" : "Число не равно 5");
