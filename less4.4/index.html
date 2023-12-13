@@ -4,9 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS less4</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        th {
+            font-weight: normal;
+            text-align: right;
+            color: darkgray;
+        }
+        input, button {
+            border: 1px solid darkgray;
+            border-radius: 4px;
+            height: 24px;
+            width: 120px;
+            box-sizing: border-box;
+        }
+        td {
+            padding-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>JavaScript</h1>
+    <form id="carForm">
+        <table>
+            <tr>
+                <th><label for="brand1">Марка машины</label></th>
+                <td>
+                    <input type="text" name="brand2" id="brand1" placeholder="Lada">
+                </td>
+            </tr>
+            <tr>
+                <th><label for="model">Модель машины</label></th>
+                <td>
+                    <input type="text" name="model" id="model" placeholder="Granta">
+                </td>
+            </tr>
+            <tr>
+                <th><label for="color">Цвет машины</label></th>
+                <td>
+                    <input type="color" name="color" id="color" value="#ff0000">
+                </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>
+                    <!-- <button 
+                        type="button"
+                        onclick="clickBtn(this)"
+                        onmousedown="console.log('Down')" 
+                        onmouseup="console.log('Up')"
+                        style="font-size: 20px; color: crimson;"
+                    >Нажать</button> -->
+                    <button 
+                        type="button"
+                        onclick="clickBtn(this)"
+                    >Нажать</button>
+                </td>
+            </tr>
+        </table>
+    </form>
     <script src="script.js"></script>
+    <script>
+        function getNumber(max = 256) {
+            return Math.floor(Math.random() * max)
+        }
+        let form = document.forms.carForm;
+
+        console.log(car.showInfo());
+
+        function clickBtn(el) {
+            // console.log(el);
+            // console.log(el.style.fontSize);
+            // console.log(el.style.color);
+            let data = {}; // data - даные!!! Не путать с датой (date);
+            el.style.background = `rgba(${getNumber()},${getNumber()},${getNumber()},${getNumber(101) / 100})`
+            data.brand = form.elements.brand2.value;
+            data.model = form.elements.model.value;
+            data.color = form.elements.color.value;
+            console.log(getNumber());
+            el.style.backgroundColor = form.elements.color.value;
+            console.log(data);
+            for (let key in data) {
+                if (data[key]) {
+                    car[key] = data[key];
+                }
+            }
+            console.log(car.showInfo());
+        }
+        
+        
+    </script>
 </body>
 </html>
