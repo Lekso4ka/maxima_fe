@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM vs DOM</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+        p {
+            margin: 0;
+        }
+        .wrapper {
+            height: 100vh;
+            padding: 50px;
+            display: grid;
+            gap: 30px;
+            align-content: flex-start;
+            box-sizing: border-box;
+        }
+        .wrapper>div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        span {
+            color: navy;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <p id="first">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero nisi <span>cumque sint eos sit dignissimos molestiae</span> molestias. <span>Libero</span>, obcaecati facere.</p>
+        <p id="second">Sit cupiditate inventore labore assumenda, deserunt architecto non <span>beatae distinctio commodi</span> sint, fuga sed velit nulla eum tempore sequi voluptatibus.</p>
+        <p id="third">Architecto eveniet doloremque cumque, possimus soluta magnam necessitatibus sunt excepturi error eaque debitis aliquam, placeat cupiditate aspernatur ad impedit fugiat.</p>
+        <button onclick="clickEvent()">Тик</button>
+        <button onclick="clickEvent2()">Так</button> -->
+    </div>
+    <script src="script.js"></script>
+    <script src="fun.js"></script>
+</body>
+</html>
