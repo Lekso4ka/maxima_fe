@@ -45,9 +45,11 @@ function pluarize(n, w0, w1, w2) {
     }
 }
 
-function createPerson() {
-    let name = names[getRandom(names.length)];
-    let icon = icons[getRandom(icons.length)];
+function createPerson(obj) {
+    let name = obj.name ? obj.name : names[getRandom(names.length)];
+    let icon = obj.icon ? obj.icon : icons[getRandom(icons.length)];
+    
+
     const card = document.createElement("div");
     card.className = "card";
 
@@ -58,10 +60,23 @@ function createPerson() {
     nameTag.innerText = name;
 
     const ageTag = document.createElement("div");
-    let age = getRandom(61, 14);
+    let age = obj.age ? obj.age : getRandom(61, 14);
     ageTag.innerHTML = `<span>${age}</span> ${pluarize(age, "лет", "год", "года")}`;
 
-    card.append(iconTag, nameTag, ageTag);
+    let tags = []
+    if (obj) {
+        for (let k in obj) {
+            if (k !== "name" && k !== "age" && k !== "icon") {
+                let tag = document.createElement("div");
+                tag.innerText = obj[k];
+                tags.push(tag);
+            }
+        }
+    }
+
+    // [1, 2, 3, 4] => 1, 2, 3, 4
+
+    card.append(iconTag, nameTag, ageTag, ...tags);
 
     const color = `rgb(${getRandom(256)},${getRandom(256)},${getRandom(256)})`
     card.style.boxShadow = `0 0 5px 0 ${color}`;
@@ -71,12 +86,12 @@ function createPerson() {
     return card;
 }
 
-const wrap = document.querySelector(".wrapper");
+// const wrap = document.querySelector(".wrapper");
 
 
 
-let random = getRandom(20, 1);
+// let random = getRandom(20, 1);
 
-while(random--) {
-    wrap.append(createPerson())
-}
+// while(random--) {
+//     wrap.append(createPerson())
+// }

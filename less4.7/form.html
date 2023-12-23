@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="../less4.3/fun.js"></script>
+    <script src="./card.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <input type="text" name="name" placeholder="Имя">
+            <select type="text" name="icon"></select>
+            <button>
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <button>Create</button>
+        </form>
+        <div class="result">
+            
+        </div>
+    </div>
+    <script>
+        hello();
+        // goodbye();
+        const select = document.querySelector("select");
+
+        icons.forEach(function(ic) {
+            select.add(new Option(ic));
+        })
+
+        const form = document.forms[0]
+        const btn = form.elements[form.elements.length - 1];
+        /*
+            .firstElementChild
+            .lastElementChild
+            .nextElementSibling
+            .previousElementSibling
+        */
+        const add = btn.previousElementSibling;
+        
+        const result = document.querySelector(".result")
+
+        let n = 0;
+        btn.onclick = function(e) {
+            // Когда на элементе есть схожее событие, заданное браузером, этот метод позволяет прервать это событие
+            e.preventDefault()
+            let obj = {};
+            for (let i = 0; i < form.elements.length; i++) {
+                let child = form.elements[i];
+                if (child.name) {
+                    obj[child.name] =child.value;
+                }
+            }
+            console.log(obj);
+            result.innerHTML = "";
+            result.append(createPerson(obj));
+        }
+
+        add.onclick = function(e) {
+            e.preventDefault();
+            let inp = form.firstElementChild.cloneNode();
+            inp.name = `add${n++}`
+            inp.placeholder = "Введите что-нибудь"
+            form.insertBefore(inp, add);
+        }
+
+        select.onchange = function() {
+            document.body.style.backgroundColor = `rgba(${getRandom(256)}, ${getRandom(256)}, ${getRandom(256)}, .4)`
+        }
+
+        form.firstElementChild.oninput = function(e) {
+            console.log(e.target.value)
+        }
+
+
+        /*
+            mouse
+                click
+                mousedown
+                mouseup
+                scroll
+                dblclick
+            input
+                blur
+                focus
+                change
+                input
+            keyboard
+                keypress
+                keydown
+                keyup
+        */
+
+        document.body.onkeydown = function(e) {
+            console.log(e.key, e.keyCode);
+        }
+
+
+
+        // декларированная функция
+        function hello() {
+            console.log("Hello!");
+        }
+
+        // функциональное выражение
+        const goodbye = function() {
+            console.log("Bye!");
+        }
+
+        // стрелочная функция
+
+        const middle = () => {
+            return 5 + 2
+        }
+
+        // const middle = a => a + 2
+
+        console.log(middle());
+
+
+        let ppl = {
+            name: "Hippo",
+            say: function(txt) { return `${this.name} say ${txt}`}
+        }
+        
+    </script>
+</body>
+</html>

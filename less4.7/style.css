@@ -22,3 +22,23 @@
     align-self: center;
     font-size: 3rem;
 }
+
+.container {
+    display: grid;
+    height: calc(100vh - 16px);
+    grid-template-columns: repeat(2, 1fr);
+}
+form {
+    display: grid;
+    gap: 20px;
+    align-content: center;
+    width: 300px;
+    justify-self: center;
+}
+.result {
+    width: 300px;
+    align-content: center;
+    display: grid;
+    align-items: center;
+    justify-self: center;
+}
