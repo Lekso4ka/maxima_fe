@@ -1,8 +1,22 @@
 /*
     Как работает EventLoop в js
     https://www.youtube.com/watch?v=8aGhZQkoFbQ&ab_channel=JSConf
-    
+    https://fuse8.ru/media/2876/frame-216.png
+
     вы не знаете js
+
+    https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
+    https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Statements/async_function
+
+    https://developer.mozilla.org/ru/docs/Web/JavaScript/Closures
+
+
+    Mime https://ru.wikipedia.org/wiki/%D0%A1%D0%BF%D0%B8%D1%81%D0%BE%D0%BA_MIME-%D1%82%D0%B8%D0%BF%D0%BE%D0%B2
+    Codes https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+    https://fakerapi.it/en
+
 */
 
 /*
@@ -101,7 +115,7 @@ promise
         console.log(err);
     })
 
- async function getDinner() {
+async function getDinner() {
     console.log("dinner");
     let task1 = await promise;
     console.log(task1)
@@ -109,7 +123,6 @@ promise
     console.log(task2);
     answ = task1;
     console.log("answ", answ);
-
 }
 
 getDinner()
@@ -119,3 +132,18 @@ console.log("answ", answ);
 
 
 
+const body = document.body;
+
+// AJAX Asynx JavaScript And XML
+
+fetch("https://fakerapi.it/api/v1/custom?_quantity=10&_locale=ru_RU&login=firstName&isMale=boolean")
+    .then(res => res.json())
+    .then(data => {
+        if (data.code === 200) {
+            console.log(data.data)
+            data.data.forEach(user => {
+                body.innerHTML += `<div style="color: ${user.isMale ? "blueviolet" : "crimson"}">${user.login}</div>`
+            })
+        }
+    })
+    
