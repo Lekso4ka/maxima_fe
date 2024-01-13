@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../less4.3/fun.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+        .sky {
+            height: 100vh;
+            background: radial-gradient(navy, indigo);
+            position: relative;
+        }
+        .star {
+            width: 30px;
+            height: 30px;
+            background: url(star.svg) center / contain no-repeat;
+            position: absolute;
+            transition: transform 1000ms;
+        }
+        .star.active {
+            background-image: url(star-w.svg);
+            transform: scale(3);
+        }
+    </style>
+</head>
+<body>
+    <div class="sky">
+    </div>
+    <!-- <script src="script.js"></script> -->
+    <script src="stars.js"></script>
+</body>
+</html>
