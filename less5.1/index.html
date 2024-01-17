@@ -1,0 +1,163 @@
+<!-- 
+    https://react.dev/
+    https://legacy.reactjs.org/
+    https://babeljs.io/setup#installation
+
+    Игра: https://ru.legacy.reactjs.org/tutorial/tutorial.html
+
+    CDN
+        https://cdnjs.com/libraries/react
+        https://cdnjs.com/libraries/react-dom
+        https://cdnjs.com/libraries/babel-standalone
+        
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Intro</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js" integrity="sha512-8Q6Y9XnTbOE+JNvjBQwJ2H8S+UV4uA6hiRykhdtIyDYZ2TprdNmWOUaKdGzOhyr4dCyk287OejbPvwl7lrfqrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js" integrity="sha512-MOCpqoRoisCTwJ8vQQiciZv0qcpROCidek3GTFS6KTk2+y7munJIlKCVkFCYY+p3ErYFXCjmFjnfTTRSC1OHWQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.8/babel.min.js" integrity="sha512-EloEMxhHnDVjte/OduE0UfxufBH8ug8MyNzYa7bu77Ad5ewVaNT2coWlB30S1a7XqoeGoCARY/xNl9UxSv79tg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .caption {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // let caption = document.createElement("h1");
+        // caption.innerText = "Hello JS";
+        // document.getElementById("root").append(caption);
+
+        // ReactDOM.render(
+        //     React.createElement(
+        //         "h1", 
+        //         null, 
+        //         "Hello React!"
+        //     ),
+        //     document.getElementById("root")
+        // )
+
+        // ReactDOM.render(
+        //     React.createElement(
+        //         "h1", 
+        //         { className: "caption" }, 
+        //         "Hello ",
+        //         React.createElement("span", {
+        //             title: "This is span!",
+        //             style: {
+        //                 color: "red",
+        //                 fontSize: "1.5em",
+        //                 fontFamily: "monospace"
+        //             }
+        //         }, "React"),
+        //         "!"
+        //     ),
+        //     document.getElementById("root")
+        // )
+
+        // ReactDOM.render(
+        //     <h1 className="caption">Hello React!</h1>, // JSX
+        //     document.getElementById("root")
+        // )
+
+        // let space = " ";
+
+        // ReactDOM.render(
+        //     <h1 className="caption">
+        //         Hello
+        //         {space}
+        //         <span>React</span>!
+        //     </h1>, // JSX
+        //     document.getElementById("root")
+        // )
+
+        
+        // ReactDOM.render(
+        //     <h1 className="caption">
+        //         Hello <span style={{
+        //             color: "red",
+        //             fontSize: "1.5em",
+        //             fontFamily: "monospace"
+        //         }}>React</span>!
+        //     </h1>, // JSX
+        //     document.getElementById("root")
+        // )
+
+        let styles = {
+            color: "red",
+            fontSize: "1.5em",
+            fontFamily: "monospace"
+        }
+
+        // ReactDOM.render(
+        //     <div>
+        //         <h1 className="caption">
+        //             Hello <span style={styles}>React</span>!
+        //         </h1>
+        //         <p>Hey! Where are am???</p>
+        //         <p>You are here!</p>
+        //     </div>
+        //     ,
+        //     document.getElementById("root")
+        // )
+
+        // ReactDOM.render(
+        //     <React.Fragment>
+        //         <h1 className="caption">
+        //             Hello <span style={styles}>React</span>!
+        //         </h1>
+        //         <p>Hey! Where are am???</p>
+        //         <p>You are here!</p>
+        //     </React.Fragment>
+        //     ,
+        //     document.getElementById("root")
+        // )
+
+        ReactDOM.render(
+            <>
+                <h1 className="caption">
+                    Hello <span style={styles}>React</span>!
+                </h1>
+                <p>Hey! Where are am???</p>
+                <p>You are here!</p>
+            </>
+            ,
+            document.getElementById("root")
+        )
+    </script>
+    <!-- 
+        React (Sber) (React Native - mobile)
+        Vue (Startup)
+        Angular (Tinkoff)
+
+        javascript-код в виде синтаксического сахара
+
+        SPA (Single Page Application) - Одностраничное приложение
+
+        html + js
+
+        ...
+            ...
+                ...
+                    ...
+                        ...
+
+        Плюсы:
+            reactive javascript
+            client rendering
+            PWA - progressive web app
+            Удобство!
+
+        Минусы:
+            seo-оптимизация
+            ssr - server-side rendering
+
+     -->
+</body>
+</html>
