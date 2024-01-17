@@ -65,26 +65,33 @@ async function getData() {
     }, 1000);
 }
 
-getData();
+// getData();
 
 
 
 
-// let cnt = Math.ceil(Math.random() * 200);
-// let starsData = [];
-// while (cnt--) {
-//     let sz = getRandom(4, 30);
-//     starsData.push(new Star(
-//         getRandom(maxX, -maxX), 
-//         getRandom(maxY, -maxY),
-//         sz % 2 ? sz + 1 : sz
-//     ))
-// }
+let cnt = Math.ceil(Math.random() * 400, 50);
+let starsData = [];
+while (cnt--) {
+    let sz = getRandom(4, 30);
+    starsData.push(new Star(
+        getRandom(maxX, -maxX), 
+        getRandom(maxY, -maxY),
+        sz % 2 ? sz + 1 : sz
+    ))
+}
 
 
-// starsData.forEach(star => showStar(star));
+starsData.forEach(star => showStar(star));
 
-// let length = starsData.length;
+let length = starsData.length;
+setInterval(() => {
+    for (let i = 0; i < activeStars.length; i++) {
+        activeStars[i].classList.remove("active");
+    }
+    domStars[getRandom(length)].classList.add("active");
+}, 100);
+
 
 
 
